@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, button {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 3px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Менеджер паролей</h1>
+  <div class="container">
+    <h2>Сохраненные пароли:</h2>
+    <ul id="password-list"></ul>
+    <h2>Добавить новый пароль:</h2>
+    <form id="add-password-form">
+      <label for="login">Логин:</label>
+      <input type="text" id="login" required>
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" required>
+      <label for="url">Ссылка:</label>
+      <input type="url" id="url" required>
+      <button type="submit">Добавить пароль</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
